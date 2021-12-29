@@ -24,7 +24,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://github.com/Danilo-GB/Portfolio"
+              href="https://github.com/Danilo-GB/"
               target="blank"
             >
               <b-icon-github />

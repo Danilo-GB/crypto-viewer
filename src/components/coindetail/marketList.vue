@@ -32,7 +32,7 @@
               />
             </th>
             <th @click="sort('volume_usd')">
-              Volume USD
+              Volume
               <b-icon-arrow-up
                 v-show="currentSort == 'volume_usd' && currentSortDir == 'asc'"
               />
