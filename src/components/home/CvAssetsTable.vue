@@ -4,7 +4,7 @@
       <table class="table table-hover center-block">
         <thead>
           <tr>
-            <th @click="sort('rank')">
+            <th @click="sort('rank')" class="mobile">
               Rank
               <b-icon-arrow-up
                 v-show="currentSort == 'rank' && currentSortDir == 'asc'"
@@ -31,7 +31,7 @@
                 v-show="currentSort == 'price_usd' && currentSortDir == 'desc'"
               />
             </th>
-            <th @click="sort('market_cap_usd')">
+            <th @click="sort('market_cap_usd')" class="mobile">
               Market Cap
               <b-icon-arrow-up
                 v-show="
@@ -44,7 +44,7 @@
                 "
               />
             </th>
-            <th @click="sort('csupply')">
+            <th @click="sort('csupply')" class="mobile">
               Supply
               <b-icon-arrow-up
                 v-show="currentSort == 'csupply' && currentSortDir == 'asc'"
@@ -53,7 +53,7 @@
                 v-show="currentSort == 'csupply' && currentSortDir == 'desc'"
               />
             </th>
-            <th @click="sort('volume24a')">
+            <th @click="sort('volume24a')" class="mobile">
               Volume(24Hr)
               <b-icon-arrow-up
                 v-show="currentSort == 'volume24a' && currentSortDir == 'asc'"
@@ -86,7 +86,7 @@
               c.msupply == 1 ? 'flash-green' : c.msupply == 0 ? 'flash-red' : ''
             "
           >
-            <td>{{ c.rank }}</td>
+            <td class="mobile">{{ c.rank }}</td>
             <td>
               <img
                 :src="`${coinIcon}/${c.symbol.toLowerCase()}@2x.png`"
@@ -97,9 +97,9 @@
               </router-link>
             </td>
             <td>${{ c.price_usd }}</td>
-            <td>${{ c.market_cap_usd | qty }}</td>
-            <td>{{ c.csupply | qty }}</td>
-            <td>${{ c.volume24a | qty }}</td>
+            <td class="mobile">${{ c.market_cap_usd | qty }}</td>
+            <td class="mobile">{{ c.csupply | qty }}</td>
+            <td class="mobile">${{ c.volume24a | qty }}</td>
             <td
               :class="
                 c.percent_change_24h.includes('-')
@@ -187,5 +187,10 @@ th {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
   font-weight: 500;
+}
+@media (max-width: 650px) {
+  .mobile {
+    display: none;
+  }
 }
 </style>

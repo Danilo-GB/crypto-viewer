@@ -14,7 +14,7 @@
               />
             </th>
             <th @click="sort('base')">
-              Base
+              Pair
               <b-icon-arrow-up
                 v-show="currentSort == 'base' && currentSortDir == 'asc'"
               />
@@ -22,17 +22,8 @@
                 v-show="currentSort == 'base' && currentSortDir == 'desc'"
               />
             </th>
-            <th @click="sort('quote')">
-              Quote
-              <b-icon-arrow-up
-                v-show="currentSort == 'quote' && currentSortDir == 'asc'"
-              />
-              <b-icon-arrow-down
-                v-show="currentSort == 'quote' && currentSortDir == 'desc'"
-              />
-            </th>
-            <th @click="sort('price_usd')">
-              Market Cap
+            <th @click="sort('price_usd')" class="mobile">
+              Price
               <b-icon-arrow-up
                 v-show="currentSort == 'price_usd' && currentSortDir == 'asc'"
               />
@@ -60,9 +51,8 @@
                 >{{ m.name }}</a
               >
             </td>
-            <td>{{ m.base }}</td>
-            <td>{{ m.quote }}</td>
-            <td>${{ m.price_usd | qty }}</td>
+            <td>{{ m.base }}/{{ m.quote }}</td>
+            <td class="mobile">${{ m.price_usd | qty }}</td>
             <td>${{ m.volume_usd | qty }}</td>
           </tr>
         </tbody>
@@ -122,5 +112,10 @@ th {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
   font-weight: 500;
+}
+@media (max-width: 650px) {
+  .mobile {
+    display: none;
+  }
 }
 </style>
