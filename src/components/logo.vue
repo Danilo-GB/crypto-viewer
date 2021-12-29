@@ -22,4 +22,9 @@
   font-size: 1rem;
   color: #808080;
 }
+@media (max-width: 400px) {
+  .brand_text {
+    display: none;
+  }
+}
 </style>

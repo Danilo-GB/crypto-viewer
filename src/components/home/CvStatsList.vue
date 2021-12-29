@@ -66,7 +66,7 @@ export default {
   align-items: stretch;
   flex-wrap: wrap;
   gap: 50px 50px;
-  padding: 28px 0 7em 0;
+  padding: 28px 2em 7em 2em;
   margin-bottom: -6em;
   background: rgb(255, 255, 255)
     linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246)) repeat

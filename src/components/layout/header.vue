@@ -1,5 +1,5 @@
 <template>
-  <div style="background=black;">
+  <div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand navbar-light desktop">
       <!-- Container wrapper -->
@@ -48,20 +48,4 @@ export default {
 };
 </script>
 
-<style>
-.mobile {
-  display: block;
-}
-.desktop {
-  display: block;
-  background: #fff;
-}
-@media (min-width: 767px) {
-  .mobile {
-    display: none;
-  }
-  .desktop {
-    display: block;
-  }
-}
-</style>
+<style></style>
