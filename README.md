@@ -1,16 +1,37 @@
-# crypto-viewer
+# Crypto Viewer
+## _SPA created using VueJS V2_
 
-> A real-time cryptocurrencies viewer
+Live on [NETLIFY](https://crypto-viewer.netlify.app/#/)!
 
-## Build Setup
+Open source project using the free [Coin Lore API](https://rapidapi.com/coinlore/api/coinlore-cryptocurrency/), created as a personal project for my portfolio, enjoy!
 
-```bash
-# install dependencies
+## Features
+
+- Home: Crypto currencies by global rank.
+-- Update time: 1 sec
+- Detail: Information of the selected currency along with its markets.
+
+## Responsive
+
+Fully responsive website, styled with Tailwind Css.
+
+
+## Installation
+
+Install the project dependencies.
+
+```sh
 npm install
+```
+Compiles and hot-reloads for production environments. 
 
-# serve with hot reload at localhost:8080
-npm run dev
+```sh
+npm run serve
+```
+Compiles and minifies for production
 
-# build for production with minification
+```sh
 npm run build
 ```
+
+
