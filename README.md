@@ -13,7 +13,7 @@ Open source project using the free [Coin Lore API](https://rapidapi.com/coinlore
 
 ## Responsive
 
-Fully responsive website, styled with Tailwind Css.
+Fully responsive website, styled with Bootstrap.
 
 
 ## Installation
